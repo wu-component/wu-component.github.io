@@ -1,8 +1,9 @@
+
 ## Table 表格
 
 用于展示多条结构类似的数据。
 
-目前只实现了最基本的数据功能，和 ElementUI 尚有些差距，后期慢慢迭代。 
+目前只实现了最基本的数据功能，和 ElementUI 尚有些差距，后期慢慢迭代。
 
 ### 基础用法
 
@@ -17,8 +18,8 @@
                 stripe="false"
                 border="true"
                 compact="false"
-                :data=data
-                :columns="columns"
+                data='[{"id":1,"name":"xwang","age":18,"address":"是是是"}]'
+                columns='[{"title":"ID","key":"id","align":"center"},{"title":"Name","align":"center","key":"name"},{"title":"age","key":"age"},{"title":"address","key":"address"}]'
         ></wu-plus-table>
 
     </div>
@@ -41,7 +42,7 @@
 
 ### 自定义渲染
 
-通过 render 实现自定义节点渲染，需要依赖  WebCorePlus.h 实现，参考案例代码。
+通过 render 实现自定义节点渲染，需要依赖  webCorePlus.h 实现，参考案例代码。
 
 ::: demo
 ```html
@@ -53,8 +54,8 @@
                 stripe="false"
                 border="true"
                 compact="false"
-                :data=data
-                :columns="columns"
+                data="[]"
+                columns="[]"
         ></wu-plus-table>
 
     </div>
@@ -71,29 +72,7 @@
     export default {
         data() {
             return {
-                data: [],
-                columns:  [
-                    { "title":"ID","key":"id","width":"80px", "align": "center" },
-                    { "title":"Name", "align": "center", "key":"name","width":"120px" },
-                    { "title":"age","key":"age","width":"120px" },
-                    { "title":"address","key":"address","width":"120px" },
-                    { "title": "操作", "width":"120px", "align": "center",
-                        render: (item) => {
-                            return WebCorePlus.h('div', null, [
-                                WebCorePlus.h(
-                                        'wu-plus-button', { size: "mini", type: "primary", style: { color: "blue", cursor: "pointer"}, onclick: (item1) => editFun(item, item1)}, '编辑'
-                                ),
-                                WebCorePlus.h(
-                                        'wu-plus-button', { size: "mini", type: "danger", style: { color: "blue", marginLeft: "8px", cursor: "pointer"}, onclick: (item1) => deleteFun(item, item1)}, '删除'
-                                )
-                            ])
-                        }
-                    }
-                ]
             }
-        },
-        methods: {
-
         },
         mounted() {
             const tableRef2 = document.getElementById("tableRef3");
@@ -104,11 +83,11 @@
                 { "title":"address","key":"address","width":"120px" },
                 { "title": "操作", "width":"120px", "align": "center",
                     render: (item) => {
-                        return WebCorePlus.h('div', null, [
-                            WebCorePlus.h(
+                        return webCorePlus.h('div', null, [
+                            webCorePlus.h(
                                     'wu-plus-button', { size: "mini", type: "primary", style: { color: "blue", cursor: "pointer"}, onclick: (item1) => editFun(item, item1)}, '编辑'
                             ),
-                            WebCorePlus.h(
+                            webCorePlus.h(
                                     'wu-plus-button', { size: "mini", type: "danger", style: { color: "blue", marginLeft: "8px", cursor: "pointer"}, onclick: (item1) => deleteFun(item, item1)}, '删除'
                             )
                         ])
@@ -135,8 +114,11 @@
                     "address":"以i"
                 }
             ]
-            tableRef2.setAttribute('data', list)
-            tableRef2.setAttribute('columns', columns)
+            this.$nextTick(() => {
+                tableRef2.setAttribute('data', list)
+                tableRef2.setAttribute('columns', columns)
+            })
+
 
         }
     }
@@ -172,7 +154,7 @@
             }
         },
         methods: {
-            
+
         }
     }
 </script>

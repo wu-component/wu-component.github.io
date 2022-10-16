@@ -13,7 +13,7 @@
     name: 'wu-test-example',
     css: css,
 })
-export class TestExample extends HTMLElement {
+export class TestExample extends WuComponent {
     constructor() {
         super();
     }
@@ -42,11 +42,11 @@ interface CustomTagOptions {
     name: 'wu-test-example',
     css: css,
 })
-export class TestExample extends HTMLElement {
+export class TestExample extends WuComponent {
     constructor() {
         super();
     }
-    
+
     @Emit('change')
     private change() {
         return {
@@ -56,12 +56,11 @@ export class TestExample extends HTMLElement {
         };
     }
 }
-
 ```
 
 #### Api
 
-Emit 必须传入事件名
+Emit 必须传入事件名。
 
 ### Watch
 
@@ -74,14 +73,14 @@ Emit 必须传入事件名
     name: 'wu-test-example',
     css: css,
 })
-export class TestExample extends HTMLElement {
+export class TestExample extends WuComponent {
     constructor() {
         super();
     }
-    
+
     @Watch('checked')
     public checkedChange(val: any, oldVal: any) {}
-    
+
 }
 
 ```
@@ -101,15 +100,14 @@ Watch 目前仅支持一个参数，为需要监听的属性，函数包含俩�
     name: 'wu-test-example',
     css: css,
 })
-export class TestExample extends HTMLElement {
+export class TestExample extends WuComponent {
     constructor() {
         super();
     }
     @Prop({ default: false, type: Boolean })
     public disabled: boolean;
-    
-}
 
+}
 ```
 
 #### Api
@@ -134,11 +132,11 @@ Inject 需要和 Provide 配套使用，Inject 用于接收父级组件注入的
     name: 'wu-test-example',
     css: css,
 })
-export class TestExample extends HTMLElement {
+export class TestExample extends WuComponent {
     constructor() {
         super();
     }
-    
+
     @Inject("wuFormRef")
     public wuForm;
 }
@@ -161,11 +159,11 @@ Provide 需要和 Inject 配套使用，Inject 用于向子孙组件注入数据
     name: 'wu-test-example',
     css: css,
 })
-export class TestExample extends HTMLElement {
+export class TestExample extends WuComponent {
     constructor() {
         super();
     }
-    
+
     @Provide("wuFormRef")
     public provideParentDescTitle() {
         return this;
@@ -175,7 +173,34 @@ export class TestExample extends HTMLElement {
 
 #### Api
 
-Provide 的装饰对象必须是一个函数，该函数必须要有返回值，返回注入的数据。 
-
+Provide 的装饰对象必须是一个函数，该函数必须要有返回值，返回注入的数据。
 
 ### State
+
+该装饰器用于定义组件内部的状态，用该注解装饰的属性和 Prop 一样，属性具备响应式的功能。
+
+#### Example
+
+```ts
+@Component({
+    name: 'wu-test-example',
+    css: css,
+})
+export class TestExample extends WuComponent {
+    constructor() {
+        super();
+    }
+    @State({ default: false, type: Boolean })
+    public disabled: boolean;
+
+}
+```
+
+#### Api
+
+```ts
+export interface StateOptions {
+    default?: any;
+    type?: PropTyp;
+}
+```

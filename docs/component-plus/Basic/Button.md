@@ -7,7 +7,7 @@
 ::: demo
 ```html
 <template>
-    <div style="display: flex; align-items: center;justify-content: space-around;padding: 16px">
+    <div class="button-container" style="display: flex; flex-wrap: wrap; align-items: center;justify-content: space-around;padding: 16px">
         <wu-plus-button size="mini" type="primary">primary</wu-plus-button>
         <wu-plus-button size="mini" type="success">success</wu-plus-button>
         <wu-plus-button size="mini" type="warning">warning</wu-plus-button>
@@ -18,6 +18,11 @@
 </template>
 <script>
 </script>
+<style>
+    .button-container wu-plus-button {
+        margin-top: 8px
+    }
+</style>
 ```
 :::
 
@@ -26,7 +31,7 @@
 ::: demo
 ```html
 <template>
-    <div style="display: flex; align-items: center;justify-content: space-between;padding: 16px">
+    <div class="button-container" style="display: flex; align-items: center;justify-content: space-between;padding: 16px">
         <wu-plus-button size="mini" type="primary" disabled="true">disabled</wu-plus-button>
     </div>
 </template>
@@ -40,7 +45,7 @@
 ::: demo
 ```html
 <template>
-    <div style="display: flex; align-items: center;justify-content: space-between;padding: 16px">
+    <div class="button-container" style="display: flex; align-items: center;justify-content: space-between;padding: 16px">
         <wu-plus-button size="medium" type="text">text</wu-plus-button>
     </div>
 </template>
@@ -55,7 +60,7 @@
 ::: demo
 ```html
 <template>
-    <div style="display: flex; align-items: center;justify-content: space-between;padding: 16px">
+    <div class="button-container" style="display: flex; align-items: center;justify-content: space-between;padding: 16px">
         <wu-plus-button size="mini" type="success" loading="true" id="buttonEvent1">loading</wu-plus-button>
     </div>
 </template>
@@ -69,7 +74,7 @@
 ::: demo
 ```html
 <template>
-    <div style="display: flex; align-items: center;justify-content: space-between;padding: 16px">
+    <div class="button-container" style="display: flex; align-items: center;justify-content: space-between;padding: 16px">
         <wu-plus-button type="primary" size="mini">mini</wu-plus-button>
         <wu-plus-button type="primary" size="small">small</wu-plus-button>
         <wu-plus-button type="primary" size="medium">medium</wu-plus-button>
@@ -85,7 +90,7 @@
 | 参数      | 说明    | 类型      | 可选值       | 默认值   |
 |---------- |-------- |---------- |-------------  |-------- |
 | size | 组件大小 | UISize | medium、small、mini | mini |
-| type | 按钮类型 | String | primary、success、warning、danger、info、text | primary |
+| type | 按钮类型 | WuButtonType | primary、success、warning、danger、info、text | primary |
 | plain | 朴素按钮 | Boolean | true、false | false |
 | round | 是否圆角 | Boolean | true、false | false |
 | loading | 是否加载中 | Boolean | true、false | false |

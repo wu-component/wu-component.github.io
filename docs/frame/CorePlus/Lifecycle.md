@@ -73,3 +73,31 @@ export interface OnUpdate<T = any> {
     updated?(): any;
 }
 ```
+
+### 使用案例
+
+```ts
+@Component({
+    name: 'wu-plus-test',
+    css: css,
+})
+export class WuSwitch extends WuComponent implements OnConnected {
+    constructor() {
+        super();
+    }
+
+    // 此处可拿到初始化完成的 shadowRoot， 此处标识 dom 结构已经初始化完成
+    public override connected(shadowRoot: ShadowRoot) {
+        console.log(shadowRoot);
+    }
+
+    public override render(_renderProps = {}, _store = {}) {
+        const checked = this.value === this.activeValue;
+        return (
+            <div>
+                <p>view</p>
+            </div>
+        );
+    }
+}
+```

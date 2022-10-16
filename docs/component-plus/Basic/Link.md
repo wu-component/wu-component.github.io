@@ -7,7 +7,7 @@
 ::: demo
 ```html
 <template>
-    <div style="display: flex; align-items: center;justify-content: space-around;padding: 16px">
+    <div style="display: flex; flex-wrap: wrap; align-items: center;justify-content: space-around;padding: 16px">
         <wu-plus-link>测试链接</wu-plus-link>
         <wu-plus-link underline="true">测试链接</wu-plus-link>
         <wu-plus-link type="danger">测试链接</wu-plus-link>

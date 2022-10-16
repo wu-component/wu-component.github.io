@@ -6,10 +6,8 @@
 
 该命令用于打包 webComponent， 该命令会构建出 umd、es、cjs 三种格式的产物，umd 格式可以直接在浏览器中预览效果。
 
-```bash
-
+```bin
 npm run build:package
-
 ```
 
 ### 自定义

@@ -2,8 +2,11 @@ module.exports = {
 	title: 'WebComponent',
 	description: '开箱即用的 webComponent 框架',
 	head: [
-		['script', { charset: "utf-8", src: "/core.esm.js" }],
-		['script', { charset: "utf-8", src: "/web-plus.esm.js" }],
+		/*['script', { charset: "utf-8", src: "/core.esm.js" }],
+		['script', { charset: "utf-8", src: "/web-plus.esm.js" }],*/
+		['script', { charset: "utf-8", src: "/js/core/index.umd.js" }],
+		['script', { charset: "utf-8", src: "/js/example/index.umd.js" }],
+		['script', { charset: "utf-8", src: "/js/ui/index.umd.js" }],
 		['link', { rel: 'icon', href: '/images/photo.png' }],
 		['meta', { name: 'theme-color', content: '#0084ff' }],
 		['link', { rel: 'manifest', href: '/manifest.json' }],
@@ -22,20 +25,138 @@ module.exports = {
 		backToTop: true,
 		smoothScroll: true,
 		nav:[
-			// {text: 't-cli', key: '1', link: '/t-cli/'},
-			{text: 'web-plus-ui', key: '13', link: '/component-plus/'},
-			/*{text: 'web-ui', key: '2', link: '/web-component-ui/'},*/
-			// {text: '前端', key: '3', link: '/web/'},
-			// {text: '浏览器扩展', link: '/chrome-extension/'},
-			/*{text: '浏览器扩展', key: '4', link: '/extension/'},
-			{text: '后端', key: '5', link: '/after/'},
-			{text: '进阶', key: '6', link: '/other/'},
-			{text: '设计', key: '7', link: '/design/'},
-			{text: 'Blog', key: '8', link: 'http://blog.canyuegongzi.xyz'},
-			{text: '全栈项目', key: '9', link: 'https://github.com/canyuegongzi'},*/
+			{text: '指南', key: '14', link: '/introduction/index'},
+			{text: '框架', key: '15', link: '/frame/log/changelog'},
+			{text: '组件', key: '16', link: '/component-plus/log/changelog'},
+			{text: '路由', key: '167', link: '/router/log/changelog'},
+			{text: '讨论', key: '16765', link: '/issues/index'},
+			{text: 'Admin模板', key: '101', link: 'https://cdn.canyuegongzi.xyz/wu-component-admin'},
 			{text: 'Github', key: '10', link: 'https://github.com/wu-component'}
+
 		],
+		sidebarDepth: 0,
 		sidebar: {
+			'/frame/': [
+				'/frame/log/changelog',
+				{
+					title: "开发者",
+					sidebarDepth: 0,
+					children: [
+						'/frame/CorePlus/Install',
+						'/frame/CorePlus/Decorators',
+						'/frame/CorePlus/Lifecycle',
+						'/frame/CorePlus/Build',
+
+					]
+				},
+			],
+			'/router/': [
+				'/router/log/changelog',
+				{
+					title: "开发者",
+					sidebarDepth: 0,
+					children: [
+						'/router/Development/OverView',
+						'/router/Development/Install',
+					]
+				},
+				'/router/Example/RouterJs',
+			],
+			'/component-plus/': [
+				'/component-plus/log/changelog',
+				{
+					title: 'Development',
+					sidebarDepth: 0,
+					children: [
+						'/component-plus/Development/Installation',
+						'/component-plus/Development/Quickstart',
+						'/component-plus/Development/Transition'
+					]
+				},
+				{
+					title: 'Basic',
+					sidebarDepth: 0,
+					children: [
+						'/component-plus/Basic/Avatar',
+						'/component-plus/Basic/Button',
+						'/component-plus/Basic/Icon',
+						'/component-plus/Basic/Link',
+						'/component-plus/Basic/Tag',
+						'/component-plus/Basic/Progress',
+					]
+				},
+				{
+					title: 'Form',
+					sidebarDepth: 0,
+					children: [
+						'/component-plus/Form/Radio',
+						'/component-plus/Form/Input',
+						'/component-plus/Form/Switch',
+						'/component-plus/Form/Checkbox',
+						'/component-plus/Form/Rate',
+						'/component-plus/Form/Cascader',
+						'/component-plus/Form/ColorPicker',
+						'/component-plus/Form/DatePicker',
+						'/component-plus/Form/DateTimePicker',
+						'/component-plus/Form/Select',
+						'/component-plus/Form/Upload',
+					]
+				},
+				{
+					title: 'Layout',
+					sidebarDepth: 0,
+					children: [
+						'/component-plus/Layout/Layout',
+						'/component-plus/Layout/Container',
+						'/component-plus/Layout/Breadcrumb',
+						'/component-plus/Layout/PageHeader',
+					]
+				},
+				{
+					title: 'Data',
+					sidebarDepth: 0,
+					children: [
+						'/component-plus/Data/Table',
+						'/component-plus/Data/Badge',
+						'/component-plus/Data/Card',
+						'/component-plus/Data/Collapse',
+						'/component-plus/Data/Empty',
+						'/component-plus/Data/Image',
+						'/component-plus/Data/Pagination',
+						'/component-plus/Data/Timeline',
+						'/component-plus/Data/Tree',
+						'/component-plus/Data/Tree-v2',
+					]
+				},
+				{
+					title: 'Notice',
+					sidebarDepth: 0,
+					children: [
+						'/component-plus/Notice/Message',
+						'/component-plus/Notice/Alert',
+						'/component-plus/Notice/Dialog',
+					]
+				},
+				{
+					title: 'Navigation',
+					sidebarDepth: 0,
+					children: [
+						'/component-plus/Navigation/Menu',
+					]
+				},
+				{
+					title: 'Others',
+					sidebarDepth: 0,
+					children: [
+						'/component-plus/Others/Popconfirm',
+						'/component-plus/Others/Popover',
+						'/component-plus/Others/Tooltip',
+
+					]
+				},
+
+			],
+
 			'/t-cli/': [
 				{
 					title: '安装',
@@ -62,89 +183,23 @@ module.exports = {
 					]
 				}
 			],
-			'/component-plus/': [
-				{
-					title: "开发者",
-					sidebarDepth: 0,
-					children: [
-						'/component-plus/CorePlus/Install',
-						'/component-plus/CorePlus/Decorators',
-						'/component-plus/CorePlus/Lifecycle',
-						'/component-plus/CorePlus/Build',
-
-					]
-				},
-				{
-					title: 'Basic',
-					sidebarDepth: 0,
-					children: [
-						'/component-plus/Basic/Button',
-						'/component-plus/Basic/Icon',
-						'/component-plus/Basic/Link',
-						'/component-plus/Basic/Tag',
-						'/component-plus/Basic/Progress',
-					]
-				},
-				{
-					title: 'Form',
-					sidebarDepth: 0,
-					children: [
-						'/component-plus/Form/Radio',
-						'/component-plus/Form/Input',
-						'/component-plus/Form/Switch',
-						'/component-plus/Form/Checkbox',
-						'/component-plus/Form/Rate',
-					]
-				},
-				{
-					title: 'Layout',
-					sidebarDepth: 0,
-					children: [
-						'/component-plus/Layout/Layout',
-						'/component-plus/Layout/Breadcrumb',
-						'/component-plus/Layout/PageHeader',
-					]
-				},
-				{
-					title: 'TimePicker',
-					sidebarDepth: 0,
-					children: []
-				},
-				{
-					title: 'Data',
-					sidebarDepth: 0,
-					children: [
-						'/component-plus/Data/Table',
-					]
-				},
-				{
-					title: 'Notice',
-					sidebarDepth: 0,
-					children: [
-						'/component-plus/Navigation/Message',
-					]
-				},
-				{
-					title: 'Navigation',
-					sidebarDepth: 0,
-					children: [
-					]
-				},
-				{
-					title: 'Others',
-					sidebarDepth: 0,
-					children: [
-					]
-				},
-
-
-
-
-			],
 		}
 	},
 	plugins: [
 		require('vuepress-plugin-demo-container'),
+		['@vuepress/search', {
+			searchMaxSuggestions: 10
+		}],
+		['@vuepress/medium-zoom', {
+			selector: 'img.medium-zoom',
+			// medium-zoom options here
+			// See: https://github.com/francoischalifour/medium-zoom#options
+			options: {
+				margin: 16,
+				// background: 'rgba(0, 0, 0, 0.3)',
+			}
+		}]
+
 		/*[
 			'vuepress-plugin-comment',
 			{
