@@ -1,3 +1,4 @@
+// import { commentPlugin } from "vuepress-plugin-comment2";
 module.exports = {
 	title: 'WebComponent',
 	description: '开箱即用的 webComponent 框架',
@@ -6,6 +7,9 @@ module.exports = {
 		['script', { charset: "utf-8", src: "/web-plus.esm.js" }],*/
 		['script', { charset: "utf-8", src: "/js/core/index.umd.js" }],
 		['script', { charset: "utf-8", src: "/js/example/index.umd.js" }],
+		// ['script', { charset: "utf-8", src: "https://unpkg.com/@waline/client@v2/dist/waline.js" }],
+		['script', { charset: "utf-8", src: "/js/comment/index.umd.js" }],
+		// ['link', { rel: 'stylesheet', src: "https://unpkg.com/@waline/client@v2/dist/waline.css" }],
 		['script', { charset: "utf-8", src: "/js/ui/index.umd.js" }],
 		['link', { rel: 'icon', href: '/images/photo.png' }],
 		['meta', { name: 'theme-color', content: '#0084ff' }],
@@ -20,6 +24,7 @@ module.exports = {
 	markdown: {
 		lineNumbers: false
 	},
+	lang: 'zh-CN',
 	themeConfig: {
 		lastUpdated: false,
 		backToTop: true,
@@ -154,6 +159,14 @@ module.exports = {
 
 					]
 				},
+				{
+					title: 'Complex',
+					sidebarDepth: 0,
+					children: [
+						'/component-plus/Complex/Comment'
+
+					]
+				},
 
 			],
 
@@ -198,7 +211,12 @@ module.exports = {
 				margin: 16,
 				// background: 'rgba(0, 0, 0, 0.3)',
 			}
-		}]
+		}],
+		/*['comment1', {
+			provider: "waline",
+			// 插件选项
+			serverURL: "https://whl47bsd.api.lncldglobal.com"
+		}],*/
 
 		/*[
 			'vuepress-plugin-comment',
