@@ -17,5 +17,5 @@ npm包
 ### 讨论区
 
 <div style="width:100%; margin: 0 auto; ">
-    <wu-waline-comment serverurl="https://wu-component-issues.vercel.app" style="--waline-theme-color: #409eff" dark="body.theme-dark" language="zh-CN" comment="true" pageview="true" emoji="['//unpkg.com/@waline/emojis@1.0.1/weibo', '//unpkg.com/@waline/emojis@1.0.1/bilibili']"></wu-waline-comment>
+    <wu-waline-comment path="/issues/" serverurl="https://comment.canyuegongzi.xyz" style="--waline-theme-color: #409eff" dark="body.theme-dark" language="zh-CN" comment="true" pageview="true" emoji="['//unpkg.com/@waline/emojis@1.0.1/weibo', '//unpkg.com/@waline/emojis@1.0.1/bilibili']"></wu-waline-comment>
 </div>

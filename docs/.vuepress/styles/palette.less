@@ -19,3 +19,15 @@
     --waline-theme-color: #409eff !important;
 }
 
+*, *::before, *::after {
+    box-sizing: unset;
+}
+
+@media (max-width: 576px){
+    .theme-container {
+        overflow-x: hidden;
+    }
+}
+.themeCodeContainer {
+    display: flex; align-items: center;justify-content: space-around;padding: 16px; flex-flow: wrap;
+}

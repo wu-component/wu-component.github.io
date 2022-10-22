@@ -7,17 +7,22 @@ module.exports = {
 		['script', { charset: "utf-8", src: "/web-plus.esm.js" }],*/
 		['script', { charset: "utf-8", src: "/js/core/index.umd.js" }],
 		['script', { charset: "utf-8", src: "/js/example/index.umd.js" }],
-		// ['script', { charset: "utf-8", src: "https://unpkg.com/@waline/client@v2/dist/waline.js" }],
-		['script', { charset: "utf-8", src: "/js/comment/index.umd.js" }],
-		// ['link', { rel: 'stylesheet', src: "https://unpkg.com/@waline/client@v2/dist/waline.css" }],
+		
 		['script', { charset: "utf-8", src: "/js/ui/index.umd.js" }],
+		// ['script', { charset: "utf-8", src: "/js/comment/index.umd.js" }],
+		// ['script', { charset: "utf-8", src: "/js/lottie/index.umd.js" }],
+
+		// ['script', { charset: "utf-8", src: "/js/comment-shadow/index.umd.js" }],
+		// ['script', { charset: "utf-8", src: "https://unpkg.com/@waline/client@v2/dist/waline.js" }],
+		// ['link', { rel: 'stylesheet', src: "https://unpkg.com/@waline/client@v2/dist/waline.css" }],
+
 		['link', { rel: 'icon', href: '/images/photo.png' }],
 		['meta', { name: 'theme-color', content: '#0084ff' }],
 		['link', { rel: 'manifest', href: '/manifest.json' }],
 		['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
 		['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
 		['meta', { name: 'msapplication-TileImage', content: '/images/photo' }],
-		['meta', { name: 'msapplication-TileColor', content: '#000000' }]
+		['meta', { name: 'msapplication-TileColor', content: '#000000' }],
 	],
 	theme: 'antdocs',
 	base: '/',
@@ -163,7 +168,8 @@ module.exports = {
 					title: 'Complex',
 					sidebarDepth: 0,
 					children: [
-						'/component-plus/Complex/Comment'
+						'/component-plus/Complex/Comment',
+						'/component-plus/Complex/Lottie',
 
 					]
 				},

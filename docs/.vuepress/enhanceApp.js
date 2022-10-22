@@ -1,4 +1,5 @@
 export default ({ Vue, isServer, options, router, siteData}) => {
+  Vue.config.ignoredElements = [/^wu-/];
 
   /**
    * Only import element-ui under client side.
@@ -8,7 +9,6 @@ export default ({ Vue, isServer, options, router, siteData}) => {
       Vue.component("Comment", res.default);
     })*/
 
-   /* import("./js/core/index.umd").then(() => {})
-    import("./js/ui/index.umd").then(() => {})*/
+    // import("./public/js/lottie/index.umd.js").then(() => {})
   }
 }

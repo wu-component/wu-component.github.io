@@ -4,13 +4,30 @@
 
 详见 [Waline详见](https://waline.js.org/)
 
-### 基础用法
+### 基础用法(未使用沙箱)
 
 ::: demo
 ```html
 <template>
     <div style="width:90%; margin: 0 auto; ">
-        <wu-waline-comment serverurl="https://whl47bsd.api.lncldglobal.com" style="--waline-theme-color:red" dark="body.theme-dark" language="zh-CN" comment="true" pageview="true" emoji="['//unpkg.com/@waline/emojis@1.0.1/weibo', '//unpkg.com/@waline/emojis@1.0.1/bilibili']"></wu-waline-comment>
+        <wu-waline-comment path="/component-plus/Complex/Comment.html" serverurl="https://whl47bsd.api.lncldglobal.com" style="--waline-theme-color:red" dark="body.theme-dark" language="zh-CN" comment="true" pageview="true" emoji="['//unpkg.com/@waline/emojis@1.0.1/weibo', '//unpkg.com/@waline/emojis@1.0.1/bilibili']"></wu-waline-comment>
+    </div>
+</template>
+<script>
+</script>
+```
+:::
+
+
+### 基础用法(使用沙箱)
+
+<a-alert message="沙箱模式下，有些问题，无法唤起表情选择器" type="error" show-icon />
+
+::: demo
+```html
+<template>
+    <div style="width:90%; margin: 0 auto; ">
+        <wu-waline-comment-shadow path="/component-plus/Complex/Comment.html" serverurl="https://whl47bsd.api.lncldglobal.com" style="--waline-theme-color:red" dark="body.theme-dark" language="zh-CN" comment="true" pageview="true" emoji="['//unpkg.com/@waline/emojis@1.0.1/weibo', '//unpkg.com/@waline/emojis@1.0.1/bilibili']"></wu-waline-comment-shadow>
     </div>
 </template>
 <script>
