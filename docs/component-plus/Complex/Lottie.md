@@ -42,8 +42,6 @@ wu-plus-lottie 是基于 lottie-web 重新进行了封装，开发者无需手�
 ```
 :::
 
-<a-alert message="wu-plus-lottie 组件未打包进进 @wu-component/ui-plus，需要单独通过 npm install @wu-component/wu-lottie 或引入 js 脚本" type="waring" show-icon />
-
 ### Attributes
 
 | 参数      | 说明    | 类型      | 可选值       | 默认值   |

@@ -7,8 +7,13 @@ module.exports = {
 		['script', { charset: "utf-8", src: "/web-plus.esm.js" }],*/
 		['script', { charset: "utf-8", src: "/js/core/index.umd.js" }],
 		['script', { charset: "utf-8", src: "/js/example/index.umd.js" }],
-		
+
 		['script', { charset: "utf-8", src: "/js/ui/index.umd.js" }],
+		['script', { charset: "utf-8", src: "/js/monaco-editor/index.umd.js" }],
+		['script', { charset: "utf-8", src: "/js/sandbox/index.umd.js" }],
+		['script', { charset: "utf-8", src: "/js/comment/index.umd.js" }],
+		['script', { charset: "utf-8", src: "/js/lottie/index.umd.js" }],
+		['script', { charset: "utf-8", src: "/js/code-playground/index.umd.js" }],
 		// ['script', { charset: "utf-8", src: "/js/comment/index.umd.js" }],
 		// ['script', { charset: "utf-8", src: "/js/lottie/index.umd.js" }],
 
@@ -40,7 +45,13 @@ module.exports = {
 			{text: '组件', key: '16', link: '/component-plus/log/changelog'},
 			{text: '路由', key: '167', link: '/router/log/changelog'},
 			{text: '讨论', key: '16765', link: '/issues/index'},
-			{text: 'Admin模板', key: '101', link: 'https://cdn.canyuegongzi.xyz/wu-component-admin'},
+			{
+				text: '生态',
+				items: [
+					{ text: 'Admin模板', key: '1014', link: 'https://static-cdn.canyuegongzi.xyz/admin-template/index.html#/button?'},
+					{ text: '演练场', key: '1017', link: 'https://cdn.canyuegongzi.xyz/wu-code-playground/playground-2022-10-30.html'},
+				]
+			},
 			{text: 'Github', key: '10', link: 'https://github.com/wu-component'}
 
 		],
@@ -170,6 +181,8 @@ module.exports = {
 					children: [
 						'/component-plus/Complex/Comment',
 						'/component-plus/Complex/Lottie',
+						'/component-plus/Complex/CodeEditor',
+						'/component-plus/Complex/Sandbox',
 
 					]
 				},
