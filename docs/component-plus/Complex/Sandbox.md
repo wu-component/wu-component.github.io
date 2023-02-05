@@ -13,7 +13,7 @@
         </div>
        
         <div class="code_content" >
-            <wu-code-sandbox @message="messageFun" id="codeSandbox" is-before-refresh="true" style="width: 70%;height: 100%"></wu-code-sandbox>
+            <wu-code-sandbox @message="messageFun" id="codeSandbox" is-before-refresh="false" style="width: 70%;height: 100%"></wu-code-sandbox>
             <div class="code_log">
                 <span class="log_item" v-for="(item, index) in logList">
                     <span>{{item.type}}:</span>
@@ -52,7 +52,7 @@
             messageFun(e) {
                 this.logList.push({
                     type: "sandbox",
-                    message: e?.detail?.data?.data?.action
+                    message: e?.detail.data?.action
                 })
             }
         }

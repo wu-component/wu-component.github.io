@@ -7,6 +7,7 @@ module.exports = {
 		['script', { charset: "utf-8", src: "/web-plus.esm.js" }],*/
 		['script', { charset: "utf-8", src: "/js/core/index.umd.js" }],
 		['script', { charset: "utf-8", src: "/js/example/index.umd.js" }],
+		// ['script', { charset: "utf-8", src: "/js/upload/index.umd.js" }],
 
 		['script', { charset: "utf-8", src: "/js/ui/index.umd.js" }],
 		['script', { charset: "utf-8", src: "/js/monaco-editor/index.umd.js" }],
@@ -48,8 +49,9 @@ module.exports = {
 			{
 				text: '生态',
 				items: [
-					{ text: 'Admin模板', key: '1014', link: 'https://static-cdn.canyuegongzi.xyz/admin-template/index.html#/button?'},
-					{ text: '演练场', key: '1017', link: 'https://cdn.canyuegongzi.xyz/wu-code-playground/playground-2022-10-30.html'},
+					{text: 'wu-cli', key: '167623', link: '/t-cli/安装/install'},
+					{ text: 'Admin-Template', key: '1014', link: 'https://static-cdn.canyuegongzi.xyz/admin-template/index.html#/button?'},
+					{ text: 'playground', key: '1017', link: 'https://static-cdn.canyuegongzi.xyz/wu-code-playground/index.html'},
 				]
 			},
 			{text: 'Github', key: '10', link: 'https://github.com/wu-component'}
@@ -145,7 +147,7 @@ module.exports = {
 						'/component-plus/Data/Image',
 						'/component-plus/Data/Pagination',
 						'/component-plus/Data/Timeline',
-						'/component-plus/Data/Tree',
+						// '/component-plus/Data/Tree',
 						'/component-plus/Data/Tree-v2',
 					]
 				},
@@ -183,6 +185,14 @@ module.exports = {
 						'/component-plus/Complex/Lottie',
 						'/component-plus/Complex/CodeEditor',
 						'/component-plus/Complex/Sandbox',
+
+					]
+				},
+				{
+					title: 'Plugin',
+					sidebarDepth: 0,
+					children: [
+						'/component-plus/Plugin/RightMenu'
 
 					]
 				},
