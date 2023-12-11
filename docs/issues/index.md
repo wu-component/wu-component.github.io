@@ -17,5 +17,20 @@ npm包
 ### 讨论区
 
 <div style="width:100%; margin: 0 auto; ">
-    <wu-waline-comment path="/issues/" serverurl="https://comment.wu-component.com" style="--waline-theme-color: #409eff" dark="body.theme-dark" language="zh-CN" comment="true" pageview="true" emoji="['//unpkg.com/@waline/emojis@1.0.1/weibo', '//unpkg.com/@waline/emojis@1.0.1/bilibili']"></wu-waline-comment>
+   <script src="https://giscus.app/client.js"
+        data-repo="wu-component/wu-component-giscus"
+        data-repo-id="R_kgDOK4QbCA"
+        data-category="Q&A"
+        data-category-id="DIC_kwDOK4QbCM4Cbplv"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
 </div>
